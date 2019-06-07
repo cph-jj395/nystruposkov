@@ -1,0 +1,228 @@
+/*
+Theme Name: OceanWP Child
+Theme URI: https://oceanwp.org/
+Description: OceanWP WordPress theme example child theme.
+Author: Nick
+Author URI: https://oceanwp.org/
+Template: oceanwp
+Version: 1.0
+*/
+
+/* Parent stylesheet should be loaded from functions.php not using @import */
+
+
+
+/* Øverste bar - lyserød m. SOME ikoner */
+#top-bar {
+    background-color: #c99696;
+}
+
+
+/* Menulinje */
+#site-navigation-wrap, .oceanwp-mobile-menu-icon {
+	background: none !important;
+	}
+
+
+/* Markering af nuværende menupunkt*/
+#site-navigation-wrap .dropdown-menu >.current-menu-item >a {
+    font-weight: bold !important;
+}
+
+
+/* Fjernelse af sidetitel*/
+.page-header-title {
+    display: none;
+}
+
+
+/* Ændring af farve på sidehoved*/
+.page-header {
+    background-color: #fff;
+    /* Align af brødkrummer med øvrig content*/
+    padding-left: 10px !important;
+}
+
+/* Styling af brødkrummer ved hamburger-menu*/
+.page-header a {
+    font-family: lora;
+    font-weight: normal;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+.breadcrumb_last {
+    font-weight: bold !important;
+    font-family: lora;
+    text-transform: uppercase;
+    font-size: 10px;
+}
+
+
+
+/* Skjuler sidehoved/brødkrummer, når menulinjen vises - starter fra width på 911px*/
+@media screen and (min-width: 911px)  {
+    .page-header {
+        display: none;
+    }
+}	
+
+
+
+/* Ændring af bredden på sidens indhold - computer og tabletversion */
+@media screen and (min-width: 960px)  {
+    .elementor-column-wrap {	
+        max-width: 80%;
+    	margin-right: 10%;
+    	margin-left: 10%;
+    }
+}
+
+
+
+/* Billedopsætning forside, kode fra https://www.w3schools.com/howto/howto_css_image_grid_responsive.asp, dog med egne tilpasninger */
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 0;
+}
+
+
+/* Første kolonne - 1 billede */
+#column1 {
+  flex: 45%;
+  max-width: 45%;
+  padding-right: 20px;
+}
+
+#column1 img {
+  vertical-align: middle;
+  width: 100%;
+}
+
+/* Anden kolonne - 2 billede */
+#column2 {
+  flex: 55%;
+  max-width: 55%;
+}
+
+#column2 img {
+  vertical-align: middle;
+  width: 100%;
+}
+
+
+/* Responsive layout - samlet til 1 kolonne med billeder, når skærmbredde er mindre end 768px */
+@media screen and (max-width: 768px) {
+  /* Første kolonne - 1 billede */
+  
+  #column1 {
+    flex: 100%;
+    max-width: 100%;
+    padding-right: 0;
+  }
+  #column1 img {
+    margin: 0;  
+  }
+  
+  /* Anden kolonne - 2 billede */
+  #column2 {
+    flex: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  #column2 img {
+    padding-top: 20px;  
+  }
+  
+}
+
+
+
+
+
+
+
+/* Tekst ovenpå forside-billede (Kode lånt fra https://www.w3schools.com/howto/howto_css_image_transparent.asp - men tilpasset til eget design) */
+
+/*tekst til øverste billede*/
+#tekst-forside-billede {
+  position: absolute; /* Position the background text */
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(255, 255, 255); 
+  background: rgba(83, 155, 98, 0.7); 
+  width: 381.39px; 
+}
+
+#tekst-forside-billede h1{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: normal;
+}
+
+
+/*tekst til illustrationer*/
+
+#tekst-forside-illustrationer {
+  position: absolute; /* Position the background text */
+  bottom: 0;
+  background: rgb(255, 255, 255); 
+  background: rgba(83, 155, 98, 0.55); 
+  width: 55%; /* Full width */
+  max-width: 55%; /* Full width */
+}
+
+#tekst-forside-illustrationer h1{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: normal;
+}
+
+
+@media screen and (max-width: 1140px) {/*tekst til øverste billede*/
+
+#tekst-forside-billede {
+  position: absolute; /* Position the background text */
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  width: 100%; 
+}
+
+#tekst-forside-billede h1{
+    font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: normal;
+}
+
+
+/*tekst til illustrationer*/
+
+
+#tekst-forside-illustrationer h1{
+    font-size: 18px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-align: center;
+  font-weight: normal;
+}
+
+
+#tekst-forside-illustrationer {
+  width: 100%; /* Full width */
+  max-width: 100%; /* Full width */
+}
+
+}
+
+
+
+
+
+
+
+
